@@ -30,6 +30,9 @@ const OPTION_FIELDS: Record<string, OptionField> = {
 		key: 'proxy_country',
 		kind: 'upper',
 	},
+	maxResults: {
+		key: 'max_results',
+	},
 };
 
 function buildActorInput(
@@ -201,6 +204,18 @@ export class SouthwestAirlinesFlightFaresScraper implements INodeType {
 						default: 'dollars',
 						description:
 							'Price the fares in US dollars or in Rapid Rewards points. One run returns one of the two.',
+					},
+					{
+						displayName: 'Max Flights Per Direction',
+						name: 'maxResults',
+						type: 'number',
+						typeOptions: {
+							minValue: 1,
+							maxValue: 100,
+						},
+						default: 10,
+						description:
+							"Maximum number of flights to return for each direction (outbound, and return for round trips), in Southwest's order",
 					},
 					{
 						displayName: 'Proxy Country',
