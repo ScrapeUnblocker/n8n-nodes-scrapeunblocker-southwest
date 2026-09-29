@@ -1,0 +1,32 @@
+{
+	"node": "n8n-nodes-scrapeunblocker-southwest.southwestAirlinesFlightFaresScraper",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Data & Storage",
+		"Miscellaneous"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-southwest#credentials"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/ScrapeUnblocker/n8n-nodes-scrapeunblocker-southwest#readme"
+			}
+		]
+	},
+	"alias": [
+		"southwest",
+		"southwest airlines",
+		"flights",
+		"airfare",
+		"fares",
+		"rapid rewards",
+		"travel",
+		"apify",
+		"scrapeunblocker"
+	]
+}
