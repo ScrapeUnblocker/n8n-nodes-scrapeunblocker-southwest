@@ -69,6 +69,7 @@ Pick a **Resource** and an **Operation**. Each n8n input item starts one Apify r
 |---|---|
 | **Adult Passengers** | Number of adult passengers (1-8) |
 | **Fare Type** | Price the fares in US dollars or in Rapid Rewards points. One run returns one of the two. |
+| **Max Flights Per Direction** | Maximum number of flights to return for each direction (outbound, and return for round trips), in Southwest's order |
 | **Proxy Country** | Exit-IP country (ISO-2). Southwest is a US airline, so the default US is recommended. |
 | **Return Date** | Return date as YYYY-MM-DD for a round trip. Leave blank for a one-way search. |
 | **Timeout (Seconds)** | Maximum run time of the Apify run. `0` keeps the Actor default. A run that times out fails the node. |
@@ -208,3 +209,4 @@ Tested with n8n 2.40 (self-hosted).
 
 - 0.1.0: Initial release
 - 0.1.1: First release published from GitHub Actions with an npm provenance statement
+- 0.1.2: Max Flights Per Direction option
