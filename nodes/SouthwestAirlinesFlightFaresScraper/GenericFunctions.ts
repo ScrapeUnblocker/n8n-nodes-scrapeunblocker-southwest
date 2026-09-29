@@ -81,7 +81,7 @@ export function parseList(value: unknown, separator: RegExp = /[\n,]+/): string[
 	return parts.map((part) => part.trim()).filter((part) => part !== '');
 }
 
-export type OptionKind = 'value' | 'list' | 'newlineList' | 'upper';
+export type OptionKind = 'value' | 'list' | 'newlineList' | 'upper' | 'nonZero';
 
 export interface OptionField {
 	key: string;
@@ -155,6 +155,12 @@ export function applyOptions(
 			}
 			case 'upper':
 				input[field.key] = String(value).trim().toUpperCase();
+				break;
+			case 'nonZero':
+				// 0 means "no limit" in the node, so the Actor gets no value at all.
+				if (Number(value) !== 0) {
+					input[field.key] = value;
+				}
 				break;
 			default:
 				input[field.key] = typeof value === 'string' ? value.trim() : value;

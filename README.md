@@ -55,7 +55,6 @@ The token starts with `apify_api_`. Treat it like a password: anyone who has it 
 
 Already have an **Apify API** credential in n8n (for example from the official Apify node)? This node uses the same credential type, so you can simply select it.
 
-
 ## Operations
 
 Pick a **Resource** and an **Operation**. Each n8n input item starts one Apify run. List fields accept several values separated by commas or new lines, or an array returned by an expression.
@@ -92,7 +91,6 @@ The node can be attached to an n8n **AI Agent** as a tool, so the agent can call
 
 - One item per flight and direction (`outbound` or `return`), with origin and destination airports, flight numbers, local and ISO departure and arrival times, total duration in minutes and the lowest fare of that direction.
 - `fares` holds each fare product by its Southwest code (`WGA`, `PLU`, `ANY`, `BUS` for dollar fares, `WGARED`, `PLURED`, `ANYRED`, `BUSRED` for points) with price, currency (`USD` or `POINTS`), points earned and availability.
-
 
 Fields of a returned item: `direction`, `boundIndex`, `origin`, `destination`, `flightNumbers`, `departureTime`, `arrivalTime`, `departureDateTime`, `arrivalDateTime`, `totalDurationMinutes`, `stops`, `boundLowestFare`, `boundLowestFareCurrency`, `fares`.
 
